@@ -18,11 +18,13 @@ var db = mongoose.connection;
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+// Created an instance of express
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('view engine', 'pug'); //* <- Setting the view engine/defining default template engine
+
 
 // Handle sessions
 app.use(session({
